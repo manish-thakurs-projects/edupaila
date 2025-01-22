@@ -8,6 +8,7 @@ import SignIn from '../pages/SignIn'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Books from '../pages/Books'
+import Joinus from '../pages/Joinus'
 
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
     <Route path='/about' element={<About />} />
     <Route path='/dashboard' element={<Dashboard />} />
     <Route path='/signup' element={<SignUp />} />
+    <Route path='/joinus' element={<Joinus />} />
     <Route path='/signin' element={<SignIn />} />
     <Route path='/books' element={<Books />} />
     </Routes>

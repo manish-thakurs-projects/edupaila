@@ -1,6 +1,6 @@
 import { Footer } from "flowbite-react";
 import Logo from "./logo";
-import { FaFacebookF, FaXing, FaLinkedinIn, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaXing, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 export default function FooterCom() {
   const currentYear = new Date().getFullYear();
