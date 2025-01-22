@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './signup.css';
 import Logo from '../src/components/logo';
-// import OAuth from '../components/OAuth';
+import OAuth from '../src/components/OAuth'
 
 export default function SignUp() {
   const [formData, setFormData] = useState({});
@@ -102,7 +102,7 @@ export default function SignUp() {
               )}
             </Button>
 
-            {/* <OAuth /> */}
+            <OAuth />
           </form>
           {errorMessage && (
             <Alert className='error-alert'>
