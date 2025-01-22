@@ -2,6 +2,7 @@ import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './signup.css';
+import Logo from '../src/components/logo';
 // import OAuth from '../components/OAuth';
 
 export default function SignUp() {
@@ -49,13 +50,7 @@ export default function SignUp() {
       <div className='signup-content'>
         {/* left */}
         <div className='signup-left'>
-          <div className='logo'>
-            <Link to="/" className='logo-faded'>
-              Edu
-              <span className='highlighted-logo'>Paila</span>
-              <span className='admin'> -ADMIN</span>
-            </Link>
-          </div>
+          <Logo/>
           <p className='intro-text'>
             This page is intended only for the admins of Edupaila. If you've somehow gained access to this page, reporting it may be rewarding.
           </p>

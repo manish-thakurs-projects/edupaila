@@ -4,17 +4,12 @@ import { AiOutlineSearch } from 'react-icons/ai'
 import { FaMoon, FaUser } from 'react-icons/fa'
 import React from 'react'
 import './app.css'
+import Logo from './logo'
 export default function Header() {
   const path = useLocation().pathname;
   return (
     <Navbar className='border-b-2 p-2'>
-    <Link to="/" className='logo self-center pl-4 whitespace-nowrap flex text-xl sm:text-2xl font-semibold dark:text-white'>
-    Edu
-  <span className='px-1 ml-1 bg-blue-500 rounded-lg text-white'>
-    Paila
-  </span>
-
-    </Link>
+    <Logo/>
     <form>
       <TextInput
       type='text'
@@ -38,21 +33,31 @@ export default function Header() {
     </div>
       <Navbar.Toggle/>
       <Navbar.Collapse>
-<Navbar.Link active={path === "/"} as={'div'}>
-<Link to='/'>Home</Link>
-</Navbar.Link>
+  <Navbar.Link
+    active={path === "/"}
+    as={'div'}
+    className="text-lg sm:text-l font-medium"
+  >
+    <Link to='/'>Home</Link>
+  </Navbar.Link>
 
-<Navbar.Link active={path === "/about"} as={'div'}>
-<Link to='/about'>About</Link>
-</Navbar.Link>
+  <Navbar.Link
+    active={path === "/about"}
+    as={'div'}
+    className="text-lg sm:text-l font-medium"
+  >
+    <Link to='/about'>About</Link>
+  </Navbar.Link>
 
-<Navbar.Link active={path === "/books"} as={'div'}>
-<Link to='/books'>Books</Link>
-</Navbar.Link>
+  <Navbar.Link
+    active={path === "/books"}
+    as={'div'}
+    className="text-lg sm:text-l font-medium"
+  >
+    <Link to='/books'>Books</Link>
+  </Navbar.Link>
+</Navbar.Collapse>
 
-
-
-      </Navbar.Collapse>
     </Navbar>
   )
 }
