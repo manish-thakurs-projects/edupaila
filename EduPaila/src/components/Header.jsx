@@ -5,6 +5,7 @@ import { FaMoon, FaSun } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleTheme } from '../redux/theme/themeSlice';
 import { signoutSuccess } from '../redux/user/userSlice';
+import { FaUserAlt } from "react-icons/fa";
 import Logo from '../components/logo'
 import { useEffect, useState } from 'react';
 import '../components/header.css'
@@ -59,14 +60,14 @@ export default function Header() {
     <input
       type="text"
       placeholder="Search..."
-      className="w-full focus:outline-none no-outline-input h-10 rounded-l-full text-black"
+      className="w-full focus:outline-none no-outline-input px-6 h-10 rounded-l-full text-black"
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
     />
   </div>
   <Button
     type="submit"
-    className="flex items-center justify-center h-10 px-4 rounded-r-full bg-gray-700 text-white transition duration-200 no-outline-button"
+    className="flex items-center justify-center w-16 h-10 px-4 rounded-r-full bg-gray-700 text-white transition duration-200 no-outline-button"
   >
     <AiOutlineSearch size={20} />
   </Button>
@@ -92,7 +93,7 @@ export default function Header() {
           arrowIcon={false}
           inline
           label={
-            <Avatar alt='user' className='h-6' img={currentUser.profilePicture} rounded />
+            <Avatar alt='user' img={currentUser.profilePicture} rounded/>
           }
         >
           <Dropdown.Header>
@@ -109,8 +110,8 @@ export default function Header() {
         </Dropdown>
       ) : (
         <Link to='/signin'>
-          <Button gradientDuoTone='purpleToBlue' outline className="no-outline-button">
-            Sign In
+          <Button gradientDuoTone='purpleToBlue' outline className="no-outline-button h-10" pill>
+          <FaUserAlt />
           </Button>
         </Link>
       )}
