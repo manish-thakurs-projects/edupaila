@@ -1,6 +1,7 @@
 import { Footer } from "flowbite-react";
 import Logo from "./logo";
-import { FaFacebookF, FaXing, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function FooterCom() {
   const currentYear = new Date().getFullYear();
@@ -81,7 +82,7 @@ export default function FooterCom() {
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-black"
             >
-              <FaXing size={24} className="hover:scale-110 transition-transform duration-150" />
+              <FaXTwitter size={24} className="hover:scale-110 transition-transform duration-150" />
             </a>
             <a
               href="#"

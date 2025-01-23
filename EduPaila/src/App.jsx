@@ -9,6 +9,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Books from '../pages/Books'
 import Joinus from '../pages/Joinus'
+import PrivateRoute from './components/PrivateRoute'
 
 
 export default function App() {
@@ -18,7 +19,9 @@ export default function App() {
     <Routes>
     <Route path='/' element={<Home />} />
     <Route path='/about' element={<About />} />
+    <Route element={<PrivateRoute/>} >
     <Route path='/dashboard' element={<Dashboard />} />
+    </Route>
     <Route path='/signup' element={<SignUp />} />
     <Route path='/joinus' element={<Joinus />} />
     <Route path='/signin' element={<SignIn />} />
