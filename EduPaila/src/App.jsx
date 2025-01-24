@@ -34,7 +34,7 @@ export default function App() {
           <Route path='/updatepost/:postId' element={<UpdatePost />} />
         </Route>
 
-        <Route path='/projects' element={<Projects />} />
+        <Route path='/books' element={<Projects />} />
         <Route path='/post/:postSlug' element={<PostPage />} />
       </Routes>
       <Footer />
